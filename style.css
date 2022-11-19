@@ -6,7 +6,6 @@
     --clr-secondary:#9F496E;
 }
 
-
 * {
     margin: 0;
     padding: 0;
@@ -71,14 +70,13 @@ body {
     resize: none;
 }
 
-
-
 #errorMessage {
     margin-bottom: 1rem;
     color: firebrick;
     font-size: 1.1rem;
     font-weight: bold;
 }
+
 .btn {
     background-color: var(--clr-primary);
     color: #FFFFFF;

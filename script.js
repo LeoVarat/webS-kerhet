@@ -4,7 +4,7 @@ const output = document.querySelector('#output');
 const messages =[];
 
 const htmlEncode = (dirty) => {
-    const clean = DOMPurify.sanitize(dirty,{ALLOWED_TAGS: ['b', 'i', 'img']});
+    const clean = DOMPurify.sanitize(dirty,{ALLOWED_TAGS: ['b', 'i']});
     return clean
   }
 
@@ -39,25 +39,9 @@ const createMessageElement = message => {
     messageDiv.appendChild(messageBody);
 
     return messageDiv;
-
-
-
 }
 
 const renderMessage = (message) => {
-    // output.insertAdjacentHTML('beforeend', `
-    // <div class="message">
-    // <header class="message-header">
-    //     <div class="img-container">
-    //         <img src="${message.imageUrl}" alt>
-    //     </div>
-    //     <h2>${message.headline}</h2>       
-    // </header>
-    // <div class="message-body">
-    //     ${message.body}
-    // </div>
-    // </div>
-    // `)
     output.appendChild(createMessageElement(message));
 }
 
@@ -65,7 +49,6 @@ const renderMessages = () => {
     output.innerHTML = ''
     for(const message of messages) {
         output.appendChild(createMessageElement(message));
-
     }
 }
 
@@ -102,11 +85,8 @@ const submitHandler = (e) => {
    }
    messages.push(message);
    console.log(messages);
-   
    e.target.reset();
-
    renderMessage(message);
-
 }
 
 
