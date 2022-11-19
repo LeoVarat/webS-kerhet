@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Web Säkerhet, Delmoment 1
+    </title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
 </head>
 <body>
     <div class="container">
@@ -17,31 +21,33 @@
             </div>
             <div class="input-group">
                 <label for="messageBody"> You Message</label>
+                    <div class="toolbar">
+                        <button class="tool-items fa fa-bold" onclick="document.execCommand('bold', false, '');"></button>
+                        <button class="tool-items fa fa-underline"  onclick="document.execCommand('underline', false, '');"></button>
+                    </div>
                 <textarea id="messageBody" cols="30" rows="10"></textarea>
             </div>
             <div class="input-group">
                 <label for="messageImage">Image Url</label>
-                <input type="text" id="massageImage">
+                <input type="text" id="messageImage">
             </div>
 
-            <div id="errorMessage" class="d-none">Please enter all the fields correctly</div>
+            <div id="errorM" class="displayNope">Please enter all the fields correctly, thnx bye!</div>
             <button class="btn">Send Message</button>
 
         </form>
-
+        <h1 class="title">Messages</h1>
         <div id="output">
-            <h1>Messages</h1>
-
-            <div class="message">
+            <!-- <div class="message">
                 <header class="message-header">
                     <div class="img-container">
                         <img src="https://images.unsplash.com/photo-1668619425350-db0d30068d66?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80" alt>
                     </div>
-                    <h2>Message Headline</h2>       
+                    <h2>Här skriver du din rubrik</h2>       
                 </header>
                 <div class="message-body">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi dignissimos consequuntur asperiores, fugit saepe nostrum accusantium quisquam architecto obcaecati, ducimus maiores at aspernatur atque cum rerum ad? Ipsum, magnam incidunt.
-                </div>
+                    Här förklarar du kort om vad problemet är, så tar en av våra tekiker en titt på det!
+                </div> -->
             </div>
 
         </div>
@@ -49,6 +55,10 @@
 
 
     </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.4.0/purify.min.js" integrity="sha512-/hVAZO5POxCKdZMSLefw30xEVwjm94PAV9ynjskGbIpBvHO9EBplEcdUlBdCKutpZsF+La8Ag4gNrG0gAOn3Ig==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
     <script src="script.js"></script>
 </body>
 </html>
