@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+        <form id="messageForm">
+            <div class="input-group">
+                <label for="messageHeadline"> Message Headline</label>
+                <input type="text" id="messageHeadline"> 
+            </div>
+            <div class="input-group">
+                <label for="messageBody"> You Message</label>
+                <textarea id="messageBody" cols="30" rows="10"></textarea>
+            </div>
+            <div class="input-group">
+                <label for="messageImage">Image Url</label>
+                <input type="text" id="massageImage">
+            </div>
+
+            <div id="errorMessage" class="d-none">Please enter all the fields correctly</div>
+            <button class="btn">Send Message</button>
+
+        </form>
+
+        <div id="output">
+            <h1>Messages</h1>
+
+            <div class="message">
+                <header class="message-header">
+                    <div class="img-container">
+                        <img src="https://images.unsplash.com/photo-1668619425350-db0d30068d66?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80" alt>
+                    </div>
+                    <h2>Message Headline</h2>       
+                </header>
+                <div class="message-body">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi dignissimos consequuntur asperiores, fugit saepe nostrum accusantium quisquam architecto obcaecati, ducimus maiores at aspernatur atque cum rerum ad? Ipsum, magnam incidunt.
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
